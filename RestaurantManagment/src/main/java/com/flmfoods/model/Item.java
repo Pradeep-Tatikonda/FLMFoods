@@ -31,6 +31,16 @@ public class Item {
 	private String itemType;
 	
 	private String itemCategory;
+
+	public Item(String itemName, double itemPrice, double itemRating, boolean isItemAvailable, String itemType,
+			String itemCategory) {
+		super();
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+		this.itemRating = itemRating;
+		this.isItemAvailable = isItemAvailable;
+		this.itemType = itemType;
+		this.itemCategory = itemCategory;
+	}
 	
-	private Restaurant restaurant;
 }
