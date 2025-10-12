@@ -1,6 +1,5 @@
 package com.flmfoods.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,10 +21,23 @@ public class OrderItem {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long orderItemId;
+	
 	private int quantity;
+	
 	private long itemId;
+	
 	@ManyToOne
 	@JoinColumn(name="order_id")
 	private Order order;
+
+	public OrderItem(int quantity, long itemId, Order order) {
+		super();
+		this.quantity = quantity;
+		this.itemId = itemId;
+		this.order = order;
+	}
+	
+	
+	
 
 }
